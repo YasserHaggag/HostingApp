@@ -9,3 +9,10 @@ export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=mysecretstring
 export URL=http://localhost:8100
+
+
+
+database user :postgres
+        password:postgres
+        Db instanse: database-1
+        DB name: postgres
