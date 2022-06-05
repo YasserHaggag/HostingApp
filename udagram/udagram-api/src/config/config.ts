@@ -6,16 +6,16 @@ dotenv.config();
 // Are Also needed
 
 export const config = {
-  username: "postgres",
-  password: "postgres",
+  username: process.env.POSTGRES_USERNAME,
+  password: process.env.POSTGRES_PASSWORD,
   database: process.env.POSTGRES_DB,
-  port: Number(5432),
-  host: "database-1.czpmybbqwycj.us-east-1.rds.amazonaws.com",
+  port:  Number(process.env._port),
+  host: process.env.POSTGRES_HOST,
   dialect: "postgres",
   aws_region: process.env.AWS_REGION,
   aws_profile: process.env.AWS_PROFILE,
   aws_media_bucket: process.env.AWS_BUCKET,
-  url: "Yasserapp-env.eba-fb6x9t3q.us-east-1.elasticbeanstalk.com/",//process.env.URL,
+  url: process.env.URL,
   jwt: {
     secret: process.env.JWT_SECRET,
   },
