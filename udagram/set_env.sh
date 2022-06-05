@@ -16,3 +16,6 @@ database user :postgres
         password:postgres
         Db instanse: database-1
         DB name: postgres
+
+
+        awsURL: Yasserapp-env.eba-fb6x9t3q.us-east-1.elasticbeanstalk.com
