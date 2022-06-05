@@ -15,7 +15,7 @@ export const config = {
   aws_region: process.env.AWS_REGION,
   aws_profile: process.env.AWS_PROFILE,
   aws_media_bucket: process.env.AWS_BUCKET,
-  url: process.env.URL,
+  url: "Yasserapp-env.eba-fb6x9t3q.us-east-1.elasticbeanstalk.com/",//process.env.URL,
   jwt: {
     secret: process.env.JWT_SECRET,
   },
