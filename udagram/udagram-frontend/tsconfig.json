@@ -1,4 +1,8 @@
-{
+{"s3":{
+  "putObject": {
+  "ACL": "bucket-owner-full-control"
+  }
+  },
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",

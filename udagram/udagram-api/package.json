@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "",
   "engines": {
-    "node": "14.15.0"
+    "node": ">=14.15.0"
   },
   "main": "src/server.js",
   "scripts": {
@@ -11,9 +11,9 @@
     "tsc": "npx tsc",
     "dev": "npx ts-node-dev --respawn --transpile-only ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
-    "clean": "rm -rf www/ || true",
+    "clean": "del -rf www/ || (exit 0)",
     "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy",
-    "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R .elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
+    "build": "npm install . && npm run clean && tsc && copy -rf src/config www/config && copy .npmrc www/.npmrc && copy -R .elasticbeanstalk www/.elasticbeanstalk  && copy package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -33,7 +33,8 @@
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^5.21.4",
-    "sequelize-typescript": "^0.6.9"
+    "sequelize-typescript": "^0.6.9",
+    "yarn": "^1.22.18"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.26",
