@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   appName: 'Yasserapp',
-  apiHost: 'http://Yasserapp-env.eba-fb6x9t3q.us-east-1.elasticbeanstalk.com/api/v0'
+  apiHost: 'http://udagram-api-dev.eba-snp8pzhz.us-east-1.elasticbeanstalk.com/api/v0'
 };
 
 /*
