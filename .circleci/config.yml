@@ -63,7 +63,7 @@ jobs:
       - browser-tools/install-chromedriver
       - restore_cache:
           keys:
-            - frontend-dependencies{{ checksum "udagram/udagram-frontend/package.json" }}
+            - frontend-dependencies{{ checksum "udagram-frontend/package.json" }}
             - frontend-dependencies
       - run:
           name: Test front-end
