@@ -14,7 +14,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - frontend-dependencies{{ checksum "udagram-frontend/package.json" }}
+            - frontend-dependencies{{ checksum "udagram/udagram-frontend/package.json" }}
             - frontend-dependencies
       - run:
          name: Install front-end dependencies
@@ -26,7 +26,7 @@ jobs:
           key: frontend-dependencies
       - restore_cache:
           keys:
-            - backend-dependencies{{ checksum "udagram-api/package.json" }}
+            - backend-dependencies{{ checksum "udagram/udagram-api/package.json" }}
             - backend-dependencies
       - run:
           name: Install back-end dependencies
@@ -63,7 +63,7 @@ jobs:
       - browser-tools/install-chromedriver
       - restore_cache:
           keys:
-            - frontend-dependencies{{ checksum "udagram-frontend/package.json" }}
+            - frontend-dependencies{{ checksum "udagram/udagram-frontend/package.json" }}
             - frontend-dependencies
       - run:
           name: Test front-end
@@ -80,7 +80,7 @@ jobs:
       - aws-elastic-beanstalk/setup
       - restore_cache:
           keys:
-            - frontend-dependencies{{ checksum "udagram-frontend/package.json" }}
+            - frontend-dependencies{{ checksum "udagram/udagram-frontend/package.json" }}
             - frontend-dependencies
       - attach_workspace:
           at: udagram-frontend
