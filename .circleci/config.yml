@@ -65,10 +65,10 @@ jobs:
           keys:
             - frontend-dependencies{{ checksum "udagram/udagram-frontend/package.json" }}
             - frontend-dependencies
-      - run:
-          name: Test front-end
-          command: |
-            npm run frontend:test
+    ##  - run:
+      ##    name: Test front-end
+        ##  command: |
+          ##  npm run frontend:test
   deploy:
     docker:
       - image: 'cimg/base:stable'
