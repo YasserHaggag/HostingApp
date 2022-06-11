@@ -14,7 +14,7 @@
     "clean": "del -rf www/ || (exit 0)",
     "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy",
     
-    "build":"npm run clean && tsc && Copy \"src/config\" \"www/config\" && Copy \".npmrc\" \"www/.npmrc\" && Copy \"package.json\" \"www/package.json\" && cd \"www\" && zip -r Archive.zip . && cd \"..\" ",
+    "build":"npm run clean && tsc && Copy \"src/config\" \"www/config\" && Copy \".npmrc\" \"www/.npmrc\" && Copy \"package.json\" \"www/package.json\" && cd www && zip -r Archive.zip . && cd .. ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
