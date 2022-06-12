@@ -82,7 +82,12 @@ jobs:
           keys:
             - frontend-dependencies{{ checksum "udagram/udagram-frontend/package.json" }}
             - frontend-dependencies
-
+      - attach_workspace:
+          at: udagram/udagram-frontend
+      - run:
+          name: Deploy frontend
+          command: |
+            npm run frontend:deploy
       - run:
           name: configure eb
           command: |
@@ -96,12 +101,6 @@ jobs:
           name: Deploy backend
           command: |
             npm run api:deploy
-      - attach_workspace:
-          at: udagram/udagram-frontend
-      - run:
-          name: Deploy frontend
-          command: |
-            npm run frontend:deploy
 workflows:
   version: 2
   udagram:
