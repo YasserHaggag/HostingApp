@@ -109,15 +109,13 @@ workflows:
           filters:
             branches:
               only:
-                - main
-                - master
+               - master
       - test:
           requires:
             - build
           filters:
             branches:
               only:
-                - main
                 - master
       - deploy:
           requires:
@@ -125,5 +123,4 @@ workflows:
           filters:
             branches:
               only:
-                - main
                 - master
