@@ -25,7 +25,7 @@ A more in depth documentation into the application.
 
 ### AWS Cloud Setup
 
-- RDS - Database Host: database-2.czpmybbqwycj.us-east-1.rds.amazonaws.com
+- RDS - Database Host: database-1.czpmybbqwycj.us-east-1.rds.amazonaws.com
 - RDS - Database Port: 5432
 - RDS - Database Name: postgres
 
